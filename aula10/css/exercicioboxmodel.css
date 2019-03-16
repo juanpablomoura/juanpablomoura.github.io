@@ -1,0 +1,29 @@
+
+body {
+    background: #D6D6D6;
+}
+
+.noticia {
+    font-family: "Opensans-Regular", Arial, sans-serif;
+}
+
+.imagem {
+    width: 190px;
+}
+
+.rodape {
+    background: white;
+    padding: 5px 5px 10px 5px;
+    width: min-content;
+    margin: 10px;
+    float: left;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 5px;
+}
+
+.paragrafo {
+    clear: both;
+}

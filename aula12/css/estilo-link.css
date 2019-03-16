@@ -1,0 +1,34 @@
+
+.menu {
+    background: #EEE685;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Não Visitado */
+a:link {
+    color: #B9C941;
+    text-decoration: none;
+}
+
+/* Visitado */
+a:visited {
+    color: #458B00;
+}
+
+/* Passar o mouse */
+a:hover {
+    color: #8B4726;
+    background-color: orange;
+}
+
+/* Clicado */
+a:active {
+    color: #FF1493;
+}
+

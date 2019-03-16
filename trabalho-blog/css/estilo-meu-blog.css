@@ -1,0 +1,155 @@
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#cabecalho {
+    background-color: rgba(102, 102, 102, 0.4);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 0 15px;
+}
+
+#meublog {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: forestgreen;
+}
+
+#meublog a {
+    text-decoration: none;
+}
+
+#menu {
+    padding: 25px 0px 0px 0px;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: inline;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    padding: 2px 5px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-left: 3px forestgreen solid;
+    font-size: 20px;
+}
+
+main {
+    /* padding: 0 10% 0 10%; */
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+article {
+    margin-bottom: 20px;
+    border: 2px black solid;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px gray;
+    -webkit-box-shadow: 5px 5px 15px gray;
+    -moz-box-shadow: 5px 5px 15px gray;
+    background: #c2e59c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(left, #64b3f4, #c2e59c);
+    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#titulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: forestgreen;
+    margin: 0;
+    padding: 0 0 5px 0;
+    text-shadow: 3px 3px 10px gray;
+}
+
+span {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+section {
+    margin: 0;
+}
+
+img {
+    width: 230px;
+    height: 150px;
+    border-radius: 15px;
+    float: right;
+    margin: 0 15px;
+}
+
+p {
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#rodape-post {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 5px;
+    margin: 10px 0;
+    border-left: 3px forestgreen solid;
+}
+
+#rodape {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+#rodape p {
+    text-align: center;
+}
+
+/*----------------------------------------*/
+/* Visitado */
+h1 a:visited {
+    color: forestgreen;
+}
+
+/* Não visitado */
+h1 a:link {
+    color: forestgreen;
+}
+/*----------------------------------------*/
+/* Visitado */
+#menu a:visited {
+    color: black;
+}
+
+/* Não visitado */
+#menu a:link {
+    color: black;
+}
+
+/* Passa mouse */
+#menu a:hover {
+    background-color: #d5ff80;
+    color: gray;
+}
+
+/* Clicado */
+#menu a:active {
+    color: black;
+}

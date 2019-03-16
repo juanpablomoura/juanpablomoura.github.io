@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Introdução ao JavaScript</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script type="text/javascript">
+        function minhafuncao1() {
+            alert('Test JS')
+        }
+        function minhafuncao2(arg) {
+            alert(arg)
+        }
+        function minhafuncao3(arg1,arg2) {
+            alert(arg1 + arg2)
+        }
+        function minhafuncao4(arg1,arg2) {
+            var soma = arg1 + arg2;
+            alert('A soma é igual a ' + soma);
+        }
+        function minhafuncao5(arg1,arg2) {
+            var soma = arg1 + arg2;
+            var msg = 'A soma é igual a ';
+            alert(msg + soma);
+        }
+        function minhafuncao6(arg1,arg2) {
+            var soma = arg1 + arg2;
+            var msg = 'A soma é igual a ';
+            alert(msg + soma);
+            var flag = true;
+            if (flag)
+                alert('Verdadeiro')
+            else
+                alert('Falso')
+        }
+        function escreve1(arg) {
+            document.write(arg)
+        }
+        function escreve2(arg) {
+            document.getElementById("minhaDiv1").innerHTML = arg;
+        }
+        function escreve3() {
+            var texto = prompt("Digite um texto qualquer!");
+            decument.getElementById("minhaDiv2").innerHTML = texto;
+        }
+    </script>
+    <style>
+        body {
+            padding-left: 25px
+        }
+    </style>
+</head>
+<body>
+
+    <h2>
+    <a href="javascript:minhafuncao1()">Clique 1</a><br>
+    <a href="javascript:minhafuncao2('Argumento 1')">Clique 2</a><br>
+    <a href="javascript:minhafuncao3(10,20)">Clique 3</a><br>
+    <a href="javascript:minhafuncao4(30,20)">Clique 4</a><br>
+    <a href="javascript:minhafuncao5(50,50)">Clique 5</a><br>
+    <a href="javascript:minhafuncao6(30,40)">Clique 6</a><br>
+    <br>
+    <a href="javascript:escreve1('<h1>Programação Web</h1>')">Escreve 1</a><br>
+    <a href="javascript:escreve2('<h1>Programação Web</h1>')">Escreve 2</a><br>
+    <a href="javascript:escreve3()">Escreve 3</a><br>
+    </h2>
+
+    <div id="minhaDiv1"></div>
+    <div id="minhaDiv2"></div>
+
+</body>
+</html>

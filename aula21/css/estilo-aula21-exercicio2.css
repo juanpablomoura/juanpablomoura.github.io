@@ -1,0 +1,39 @@
+
+body {
+    background-color: lightblue;
+}
+
+.principal {
+    margin: 10px;
+    display: block;
+}
+
+.conteudo {
+    background-color: white;
+    padding: 15px;
+    width: 18%;
+    border: 1px gray solid;
+    border-top: 3px blue solid;
+    border-radius: 5px
+}
+
+h5 {
+    color: gray;
+}
+
+h6 {
+    color: darkgray;
+}
+
+.info {
+    padding-top: 5px;
+    border-top: 1px lightgray solid;
+}
+
+.info2{
+    font-weight: bold;
+}
+
+.num {
+    color: blue;
+}

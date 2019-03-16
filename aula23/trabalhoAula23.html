@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho Aula 23</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-lg-12">
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                    data-target="#pesquisarProdutos"><i class="far fa-clock"></i> Pedidos Recentes</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Enviar
+                    Cliente</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Receber
+                    Pagamento</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Todos os
+                    Pedidos</button>
+                <button type="button" class="btn btn-primary"><i class="far fa-file"></i> Novo Pedido</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-home"></i> Página Principal</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="pesquisarProdutos">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Pesquisa de Produtos</h6>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Fechar">&times;</a>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <h6>Descrição</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-search"></i>
+                                Pesquisar</button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-sync-alt"></i>
+                                Recarregar</button>
+                            <button type="button" class="btn btn-primary btn-sm">Novo</button>
+                        </div>
+                    </div>
+                    <div class="row mt-2 justify-content-between">
+                        <div class="col-sm-3">
+                            <small>Registro por página</small>
+                            <form>
+                                <select class="form-control">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <small>Buscar:</small>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Descrição</th>
+                                <th>Situação</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Pizza</td>
+                                <td><span class="badge badge-success">Ativo</span></td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Detalhes"><i
+                                                class="far fa-clipboard"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Excluir"><i
+                                                class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Refrigerante</td>
+                                <td><span class="badge badge-success">Ativo</span></td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Detalhes"><i
+                                                class="far fa-clipboard"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Excluir"><i
+                                                class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Cajuína</td>
+                                <td><span class="badge badge-secondary">Inativo</span></td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Detalhes"><i
+                                                class="far fa-clipboard"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Excluir"><i
+                                                class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Borda</td>
+                                <td><span class="badge badge-success">Ativo</span></td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Detalhes"><i
+                                                class="far fa-clipboard"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                            data-placement="bottom" title="Excluir"><i
+                                                class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+
+</body>
+
+</html>

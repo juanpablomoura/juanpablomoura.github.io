@@ -1,0 +1,123 @@
+
+.submenu:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+}
+
+.sistema {
+    border: 1px rgb(71, 139, 202) solid;
+    background-color: rgb(71, 139, 202);
+    color: white;
+    padding-left: 3px;
+    width: 100%;
+}
+
+
+/* Menu Rápido */
+.menurapido {
+    position: relative;
+    display: inline-flex;
+    width: 30%;
+    justify-content: center;
+}
+
+.menurapido button {
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    font-size: 15px;
+}
+
+.menurapido i {
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: black;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.btmenurapido {
+    height: 120px;
+}
+
+/* Informações Rápida */
+.informacoes {
+    display: inline-flex;
+}
+
+.informacoes i {
+    padding: 20px;
+}
+
+.jumbotron {
+    background-color: lightgray;
+}
+
+/* Listagem */
+.listagem {
+    color: white;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+/* Formulários */
+.cabecalho-form {
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(71, 139, 202);
+    color: white;
+    border-radius: 5px;
+}
+
+.formulario {
+    width: 60%;
+}
+
+#nomePrato, #nomeCliente, #caldoSopa, #carneVermelha, #carneBranca, #suco, #refrigerante, #cpfCliente, 
+#rgCliente, #enderecoCliente, #complementoEndCliente {
+    width: 100%;
+    text-transform: capitalize;
+}
+
+#emailCliente, #senhaCliente {
+    width: 100%;
+}
+
+.formatacao {
+    font-size: 10px;
+    color: gray;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #343A40;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.footerCopyright {
+    background-color: rgb(28, 30, 32);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Relatórios */
+.pRelat {
+    background-color: rgb(71, 139, 202);
+    border: 1px rgb(71, 139, 202) solid;
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+}

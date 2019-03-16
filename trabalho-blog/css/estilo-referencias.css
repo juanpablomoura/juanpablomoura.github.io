@@ -1,0 +1,52 @@
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin: 20px 0 0 20px;
+    padding: 0;
+}
+
+ul {
+    list-style-type: circle;
+    margin: 10px 0 0 40px;
+    padding: 0;
+}
+
+li > a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0 0 40px;
+    padding: 0;
+}
+
+button > a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* Visitado */
+li a:visited {
+    color: black;
+}
+
+/* Não visitado */
+li a:link {
+    color: black;
+}
+
+/* Passar Mouse */
+li a:hover {
+    background-color: #d5ff80;
+}
+
+/* Clicado */
+li a:active {
+    color: black;
+}

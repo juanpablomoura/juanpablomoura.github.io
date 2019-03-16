@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tabela com CSS</title>
+    <style>
+        
+        table {
+            font-family: Verdana, Geneva, Arial, Helvetica;
+            font-size: 10pt;
+            text-align: center;
+            padding-left: 4px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th {
+            border: 1px solid black;
+            background-color: #b2beff;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        .linhaImpar {
+            background-color: #C1CDC1;
+        }
+
+        .linhaPar {
+            background-color: #E0EEE0;
+        }
+
+        .linhaTotal {
+            background-color: #EEE0E5;
+        }
+
+        tr:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+
+        <tr>
+            <th>Loja</th>
+            <th>Janeiro</th>
+            <th>Fevereiro</th>
+        </tr>
+        <tr>
+            <td class="linhaImpar">Filial 1</td>
+            <td class="linhaImpar">120</th>
+            <td class="linhaImpar">320</td>
+        </tr>
+        <tr>
+            <td class="linhaPar">Filial 2</td>
+            <td class="linhaPar">120</td>
+            <td class="linhaPar">120</td>
+        </tr>
+        <tr>
+            <td class="linhaTotal">Total</td>
+            <td class="linhaTotal">240</td>
+            <td class="linhaTotal">440</td>
+        </tr>
+
+    </table>
+</body>
+</html>

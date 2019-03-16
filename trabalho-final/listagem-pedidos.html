@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Listagem de Pedidos Realizados - Restaurante Cantinho da Amizade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html"><i class="fas fa-utensils"></i> Cantinho da Amizade</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Logo -->
+
+            <!-- Menu e Submenu-->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle-split" role="button" data-toggle="dropdown" href="#"><i
+                                class="fas fa-list-ol"></i> Listagem</a>
+                        <div class="dropdown-menu">
+                            <a href="listagem-clientes.html" class="submenu dropdown-item">Clientes</a>
+                            <a href="listagem-pedidos.html" class="submenu dropdown-item">Pedidos</a>
+                            <a href="listagem-pratos.html" class="submenu dropdown-item">Pratos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="relatorios.html"><i class="fas fa-clipboard-check"></i> Relatórios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#cardapio"><i
+                                class="far fa-calendar-alt"></i>
+                            Cardápio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle-split" role="button" data-toggle="dropdown" href="#"><img
+                                src="img/comida.jpg" alt="administrador"></a>
+                        <div class="dropdown-menu dropdown-menu-left">
+                            <a href="#" class="submenu dropdown-item"><i class="fas fa-user"></i> Conta</a>
+                            <a href="#" class="submenu dropdown-item"><i class="fas fa-key"></i> Alterar Senha</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="login.html" class="submenu dropdown-item"><i class="fas fa-sign-out-alt"></i>
+                                Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Menu e Submenu -->
+
+        </div>
+    </nav>
+    <!-- Barra de Navegação -->
+
+    <div class="sistema">
+        <h>Bem vindo(a) administrador: Teresina, 15 de Março de 2019 12:33:47 Sistema Cantinho da Amizade v1.0.0</h>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+
+        <h5 class="mt-5 listagem bg-success">Pesquisar Pedidos</h5>
+        <div class="row mt-3">
+            <div class="col-md-1">
+                <h6>Nome Cliente</h6>
+            </div>
+            <div class="col-md-4">
+                <form>
+                    <input type="search" id="pesquisarPratos" class="form-control">
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-1">
+                <h6>Data do Pedido</h6>
+            </div>
+            <div class="col-md-4">
+                <form>
+                    <input type="date" name="dataPedido" id="dataPedido" class="form-control">
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+                <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
+                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
+                <button type="button" class="btn btn-outline-primary btn-sm">Limpar</button>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#fazerPedido">Inserir
+                    Novo</button>
+            </div>
+        </div>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome do Cliente</th>
+                    <th>Data do Pedido</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Stefany Karoline</td>
+                    <td>08/02/2019</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Detalhes"><i class="far fa-clipboard"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Excluir"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Juan Pablo</td>
+                    <td>08/02/2019</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Detalhes"><i class="far fa-clipboard"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Excluir"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Jacqueline de Carvalho</td>
+                    <td>16/02/2019</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Detalhes"><i class="far fa-clipboard"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Excluir"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>Rebeca Maria</td>
+                    <td>16/02/2019</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Detalhes"><i class="far fa-clipboard"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Excluir"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td>Hector Danilo</td>
+                    <td>16/02/2019</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Detalhes"><i class="far fa-clipboard"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Editar"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                data-placement="bottom" title="Excluir"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+    <!-- Conteúdo Principal -->
+
+    <!-- Footer -->
+    <footer class="font-small unique-color-dark pt-4 mt-5">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-9 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Trabalho Final</h5>
+                    <p>Projeto final da disciplina de Introdução à Programação Web do curso de Licenciatura em
+                        Informática
+                        do IFPI - Campus Zona Sul<br>Professor Orientador: Me. Jefferson S. Silva</p>
+                </div>
+
+                <hr class="clearfix w-100 d-md-none pb-1">
+
+                <!-- Contato -->
+                <div class="col-md-3 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Contato</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a target="_blank" href="#">
+                                <i class="fas fa-envelope"></i> juanzitoo.moura@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#">
+                                <i class="fab fa-whatsapp"></i> (86) 99972-0761
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Contato -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footerCopyright text-center py-1">© 2019 Copyright: Juan Pablo</div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    <!-- Modal ADD PRATO -->
+    <div class="modal" id="addPrato">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastrar novo prato</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Nome do Prato</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="text" id="nomePrato" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Tipo do Prato</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="radio" name="tipo" value="arroz"> Arroz
+                                <input type="radio" name="tipo" value="carneVermelha"> Carne Vermelha
+                                <input type="radio" name="tipo" value="carneBranca"> Carne Branca
+                                <input type="radio" name="tipo" value="caldo"> Caldo/Sopa
+                                <input type="radio" name="tipo" value="salada"> Salada
+                                <br>
+                                <input type="radio" name="tipo" value="acompanhamento"> Acompanhamento
+                                <input type="radio" name="tipo" value="sobremesa"> Sobremesa
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="float-right">
+                        <button type="button" class="btn btn-outline-primary float">Limpar</button>
+                        <button type="button" class="btn btn-primary">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal ADD PRATO -->
+
+    <!-- Modal FAZER PEDIDO -->
+    <div class="modal" id="fazerPedido">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="documento">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fazer Pedido</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Nome do Cliente</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="text" id="nomeCliente" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Tipo</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="radio" name="tipoPFQuentinha"> PF
+                                <input type="radio" name="tipoPFQuentinha"> Quentinha
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Arroz</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="radio" name="arroz"> Branco
+                                <input type="radio" name="arroz"> Baião de dois
+                                <input type="radio" name="arroz"> Não
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Carne</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="checkbox" name="carneBranca"> Carne Branca
+                                <input type="text" id="carneBranca" class="form-control">
+                                <br>
+                                <input type="checkbox" name="carneVermelha"> Carne Vermelha
+                                <input type="text" id="carneVermelha" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Caldo/Sopa</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="radio" name="caldoSopa"> Sim
+                                <input type="radio" name="caldoSopa"> Não
+                                <br>
+                                <input type="text" id="caldoSopa" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Salada</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="checkbox" name="salada"> Crua sem frutas
+                                <input type="checkbox" name="salada"> Crua com frutas
+                                <input type="checkbox" name="salada"> Cozida
+                                <input type="checkbox" name="salada"> De Maionese
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Acompanhamento</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="checkbox" name="acompanhamento"> Feijão
+                                <input type="checkbox" name="acompanhamento"> Macarrão
+                                <input type="checkbox" name="acompanhamento"> Farofa
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Bebida</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="checkbox" name="suco"> Suco de Frutas
+                                <input type="text" id="suco" class="form-control">
+                                <br>
+                                <input type="checkbox" name="suco"> Refrigerante
+                                <input type="text" id="refrigerante" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Sobremesa</h6>
+                        </div>
+                        <div class="col-md-9">
+                            <form>
+                                <input type="checkbox" name="sobremesa"> Pudim de Leite
+                                <input type="checkbox" name="sobremesa"> Mousse de Maracujá
+                                <input type="checkbox" name="sobremesa"> Mousse de Limão
+                                <input type="checkbox" name="sobremesa"> Não
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="float-right">
+                        <button type="button" class="btn btn-outline-primary float">Limpar</button>
+                        <button type="button" class="btn btn-primary">Solicitar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal FAZER PEDIDO -->
+
+    <!-- Modal ADD CLIENTE -->
+    <div class="modal" id="addCliente">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="documento">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form>
+                                <input type="text" id="nomeCliente" placeholder=" Nome Completo" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>CPF</h6>
+                            <form>
+                                <input type="text" id="cpfCliente" placeholder=" Ex: 123.456.789-10"
+                                    class="form-control">
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>RG</h6>
+                            <form>
+                                <input type="text" id="rgCliente" placeholder=" Ex: 1.234.567" class="form-control">
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Data de Nascimento</h6>
+                            <form>
+                                <input type="date" name="dataNascCliente" id="dataNascCliente" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Sexo</h6>
+                            <form>
+                                <select class="form-control" id="sexoCliente">
+                                    <option value="f">Feminino</option>
+                                    <option value="m">Masculino</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Telefone</h6>
+                            <form>
+                                <input type="text" name="telefoneCliente" id="telefoneCliente"
+                                    placeholder=" Ex: (99) 99999-9999" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h6>Endereço</h6>
+                            <form>
+                                <input type="text" name="enderecoCliente" id="enderecoCliente"
+                                    placeholder=" Ex: Rua Teresina" class="form-control">
+                            </form>
+                        </div>
+                        <div class="col-md-2">
+                            <h6>Número</h6>
+                            <form>
+                                <input type="text" name="numEndCliente" id="numEndCliente" placeholder=" Ex: 100"
+                                    class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Complemento</h6>
+                            <form>
+                                <input type="text" name="complementoEndCliente" id="complementoEndCliente"
+                                    placeholder=" Ex: Bloco 1 Quadra A" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>E-mail</h6>
+                            <form>
+                                <input type="email" id="emailCliente" placeholder=" Ex: cantinhodaamizade@gmail.com"
+                                    class="form-control">
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Confirme o E-mail</h6>
+                            <form>
+                                <input type="email" id="emailCliente" placeholder=" Ex: cantinhodaamizade@gmail.com"
+                                    class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Senha <span class="formatacao">(somente números)</span></h6>
+                            <form>
+                                <input type="password" id="senhaCliente" placeholder=" Digite a senha" minlength="4"
+                                    maxlength="8" class="form-control">
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Confirme a Senha <span class="formatacao">(somente números)</span></h6>
+                            <form>
+                                <input type="password" id="senhaCliente" placeholder=" Confirme a senha" minlength="4"
+                                    maxlength="8" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="float-right">
+                        <button type="button" class="btn btn-outline-primary float">Limpar</button>
+                        <button type="button" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal ADD CLIENTE -->
+
+    <!-- Modal Cardápio -->
+    <div class="modal" id="cardapio">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h class="modal-title"><b>Cardápio Semanal</b></h>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body table-responsive-lg">
+                    <table class="tabela-modal table table-striped table-bordered table-hover table-sm">
+                        <thead class="cabecalho-tabela">
+                            <tr>
+                                <th>Segunda</th>
+                                <th>Terça</th>
+                                <th>Quarta</th>
+                                <th>Quinta</th>
+                                <th>Sexta</th>
+                                <th>Sábado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="corpo-tabela">
+                            <tr>
+                                <td>Assado de Panela</td>
+                                <td>Assado de Panela</td>
+                                <td>Assado de Panela</td>
+                                <td>Frango a Passarinho</td>
+                                <td>Costela Suína ao Forno</td>
+                                <td>Arroz com Pollo</td>
+                            </tr>
+                            <tr>
+                                <td>Frango Assado</td>
+                                <td>Frango Assado</td>
+                                <td>Frango Assado</td>
+                                <td>Bife Acebolado</td>
+                                <td>Frango ao Forno</td>
+                                <td>Sancocho</td>
+                            </tr>
+                            <tr>
+                                <td>Mão de Vaca</td>
+                                <td>Carneiro ao Molho</td>
+                                <td>Almondêgas</td>
+                                <td>Carne de Sol</td>
+                                <td>Toscana na Brasa</td>
+                                <td>Frango Empanado</td>
+                            </tr>
+                            <tr>
+                                <td>Leitão Assado</td>
+                                <td>Fígado Acebolado</td>
+                                <td>Guisado de Leitão</td>
+                                <td>Frango ao Molho com Batata</td>
+                                <td>Maminha na Brasa</td>
+                                <td>Sudado de Pollo</td>
+                            </tr>
+                            <tr>
+                                <td>Frango Grelhado</td>
+                                <td>Bisteca Suína</td>
+                                <td>Chuleta de Petchuga</td>
+                                <td>Sudado de Res</td>
+                                <td>Sopa de Creme de Legumes com Espinafre</td>
+                                <td>Sudado de Res</td>
+                            </tr>
+                            <tr>
+                                <td>Bife Acebolado</td>
+                                <td>Sopa de Pollo com Pastas</td>
+                                <td>Chuleta de Res</td>
+                                <td>Peito de Frango/Petchuga</td>
+                                <td>Peito de Frango/Petchuga</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Bisteca Suína</td>
+                                <td>Petchuga</td>
+                                <td>Sopa de Lentilha</td>
+                                <td>Sopa de Almondêgas</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sancocho</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Cardápio -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+
+</body>
+
+</html>
