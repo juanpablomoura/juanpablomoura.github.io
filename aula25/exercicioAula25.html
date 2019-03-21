@@ -13,28 +13,7 @@
                 $(tipo).show(1000);
             else
                 $(tipo).hide(1000);
-        }
-
-        // function exibirOcultarTAG(tag, flag) {
-        //     if (flag)
-        //         $(tag).show(1000);
-        //     else
-        //         $(tag).hide(1000);
-        // }
-		
-        // function exibirOcultarClasse(classe, flag) {
-        //     if (flag)
-        //         $('.' + classe).show(1000);
-        //     else
-        //         $('.' + classe).hide(1000);
-        // }
-
-        // function exibirOcultarID(id, flag) {
-        //     if (flag)
-        //         $('#' + id).show(1000);
-        //     else
-        //         $('#' + id).hide(1000);
-        // }             
+        }           
     </script>
 
 </head>
@@ -89,20 +68,20 @@
             </div>
 
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="exibirOcultar(false)">Esconder
+                <button type="button" class="btn btn-danger" onclick="exibirOcultar('.caixa2',false)">Esconder
                     divs</button>
-                <button type="button" class="btn btn-success" onclick="exibirOcultar(true)">Exibir
+                <button type="button" class="btn btn-success" onclick="exibirOcultar('.caixa2',true)">Exibir
                     divs</button>
             </div>
 
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="exibirOcultar(false)">Esconder input ID
+                <button type="button" class="btn btn-danger" onclick="exibirOcultar('#campo1',false)">Esconder input ID
                     1</button>
-                <button type="button" class="btn btn-danger" onclick="exibirOcultar(false)">Esconder input ID
+                <button type="button" class="btn btn-danger" onclick="exibirOcultar('#campo2',false)">Esconder input ID
                     2</button>
-                <button type="button" class="btn btn-success" onclick="exibirOcultar(true)">Exibir input ID
+                <button type="button" class="btn btn-success" onclick="exibirOcultar('#campo1',true)">Exibir input ID
                     1</button>
-                <button type="button" class="btn btn-success" onclick="exibirOcultar(true)">Exibir input ID
+                <button type="button" class="btn btn-success" onclick="exibirOcultar('#campo2',true)">Exibir input ID
                     2</button>
 
             </div>
